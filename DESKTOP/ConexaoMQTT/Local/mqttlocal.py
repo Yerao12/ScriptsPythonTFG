@@ -14,9 +14,9 @@ horaformatada = timestamp.strftime("%A %d %B %y") # formata o time stamp para um
 def connect_mqtt() -> mqtt_client:
     def on_connect(client, userdata, flags, rc):
         if rc == 0:
-            print("Connected to MQTT Broker!")
+            print("Conectado ao broker!")
         else:
-            print("Failed to connect, return code %d\n", rc)
+            print("Falha ao conectar, com codigo %d\n", rc)
 
     client = mqtt_client.Client(client_id)
     client.on_connect = on_connect
